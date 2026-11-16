@@ -2,12 +2,12 @@ import asyncio
 from collections.abc import Iterable
 from dataclasses import dataclass
 from decimal import Decimal
-from enum import Enum
+from enum import StrEnum
 
 # companies_service.py
 
 
-class CompanyStatus(Enum):
+class CompanyStatus(StrEnum):
     APPROVED = "approved"
     REJECTED = "rejected"
     EXITED = "exited"
@@ -112,7 +112,7 @@ async def fetch_investors() -> list[Investor]:
 # financing.py
 
 
-class FinancingStatus(Enum):
+class FinancingStatus(StrEnum):
     IN_REVIEW = "in_review"
     ACCEPTED = "accepted"
     DECLINED = "declined"
